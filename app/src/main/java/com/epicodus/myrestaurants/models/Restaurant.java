@@ -1,18 +1,24 @@
 package com.epicodus.myrestaurants.models;
 
 
-import java.util.ArrayList;
+import org.parceler.Parcel;
 
+import java.util.ArrayList;
+import java.util.List;
+
+@Parcel
 public class Restaurant {
     private String name;
     private String phone;
     private String website;
     private double rating;
     private String imageUrl;
-    private ArrayList<String> address = new ArrayList<>();
+    private List<String> address = new ArrayList<>();
     private double latitude;
     private double longitude;
-    private ArrayList<String> categories = new ArrayList<>();
+    private List<String> categories = new ArrayList<>();
+
+    public Restaurant() {}
 
     public Restaurant(String name, String phone, String website,
                       double rating, String imageUrl, ArrayList<String> address,
@@ -26,7 +32,13 @@ public class Restaurant {
         this.latitude = latitude;
         this.longitude = longitude;
         this.categories = categories;
+//        this.mImageUrl = getLargeImageUrl(imageUrl);
     }
+
+//    public String getLargeImageUrl(String imageUrl) {
+//        String largeImageUrl = imageUrl.substring(0, imageUrl.length() - 6).concat("o.jpg");
+//        return largeImageUrl;
+//    }
 
     public String getName() {
         return name;
@@ -48,7 +60,7 @@ public class Restaurant {
         return imageUrl;
     }
 
-    public ArrayList<String> getAddress() {
+    public List<String> getAddress() {
         return address;
     }
 
@@ -60,7 +72,7 @@ public class Restaurant {
         return longitude;
     }
 
-    public ArrayList<String> getCategories() {
+    public List<String> getCategories() {
         return categories;
     }
 }
