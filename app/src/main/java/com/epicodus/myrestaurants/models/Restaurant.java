@@ -90,4 +90,8 @@ public class Restaurant {
     public void setIndex(String index) {
         this.index = index;
     }
+
+    public String getPushId() {
+        return pushId;
+    }
 }
