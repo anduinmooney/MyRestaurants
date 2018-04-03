@@ -85,18 +85,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                             Toast.LENGTH_SHORT).show();
                 }
             }
-        })
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Log.d(TAG, "Authentication successful");
-                        } else {
-                            Toast.makeText(CreateAccountActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+        });
+
     }
 
     @Override
