@@ -30,4 +30,5 @@ public class SavedRestaurantListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved_restaurant_list);
     }
+
 }

@@ -29,21 +29,16 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class SavedRestaurantListFragment extends Fragment implements OnStartDragListener {
-    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
-
     private FirebaseRestaurantListAdapter mFirebaseAdapter;
     private ItemTouchHelper mItemTouchHelper;
 
+    @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
 
-    public SavedRestaurantListFragment() {
-        // Required empty public constructor
-    }
-
+    public SavedRestaurantListFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.fragment_saved_restaurant_list, container, false);
         ButterKnife.bind(this, view);
         setUpFirebaseAdapter();
